@@ -19,6 +19,7 @@ This project aims to:
 - **NumPy**: For numerical computations and array operations
 - **SciPy**: For statistical functions and cumulative normal distribution
 - **PyTorch**: For neural network implementation
+- **Redis**: For efficient caching of API responses
 
 ## Mathematical Background
 
