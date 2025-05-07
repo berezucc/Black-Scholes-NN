@@ -11,3 +11,4 @@ torch>=1.9.0
 fastapi>=0.79.0
 uvicorn>=0.18.2
 scikit-learn>=0.22
+redis>=4.5.5

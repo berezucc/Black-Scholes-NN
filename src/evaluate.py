@@ -1,5 +1,6 @@
 import torch
 import pandas as pd
+import numpy as np
 from sklearn.metrics import mean_absolute_error, mean_squared_error
 from src.model import baseline_model
 
@@ -24,7 +25,7 @@ def evaluate_model(csv_path, model_path):
 
     # Compute evaluation metrics
     mae = mean_absolute_error(y_true, y_pred)
-    rmse = mean_squared_error(y_true, y_pred, squared=False)
+    rmse = np.sqrt(mean_squared_error(y_true, y_pred))
 
     print(f"MAE: {mae:.4f}")
     print(f"RMSE: {rmse:.4f}")
