@@ -20,6 +20,9 @@ This project aims to:
 - **SciPy**: For statistical functions and cumulative normal distribution
 - **PyTorch**: For neural network implementation
 
+## System Architecture
+![diagram](design/system_architecture.png)
+
 ## Mathematical Background
 
 The Black-Scholes formula for European call options is:
@@ -47,15 +50,21 @@ The Black-Scholes formula for European call options is:
 
 ### Using Docker (Recommended)
 
-1. Build the Docker image:
+1. Run Redis:
+```bash
+docker run -d --name redis-server -p 6379:6379 redis
+```
+
+2. Build the Docker image:
 ```bash
 docker build -t black-scholes-nn .
 ```
 
-2. Run the container:
+3. Run the API:
 ```bash
-docker run -p 8000:8000 black-scholes-nn
+docker run -p 8000:8000 --env REDIS_HOST=host.docker.internal black-scholes-nn
 ```
+
 
 This will:
 - Generate the training data
