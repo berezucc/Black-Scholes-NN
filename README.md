@@ -25,15 +25,10 @@ This project aims to:
 The Black-Scholes formula for European call options is:
 
 **Call Option Price:**
-$$
-C = S e^{-qT} \Phi(d_1) - K e^{-rT} \Phi(d_2)
-$$
+![Black-Scholes Formula](formulas/black_scholes_formula.png)
 
 **Where:**
-$$
-d_1 = \frac{\ln(S / K) + \left(r - q + \frac{1}{2}\sigma^2\right) T}{\sigma \sqrt{T}}, \quad
-d_2 = d_1 - \sigma \sqrt{T}
-$$
+![Black-Scholes Formula](formulas/z-scores.png)
 
 - S₀: Initial stock price
 - K: Strike price
